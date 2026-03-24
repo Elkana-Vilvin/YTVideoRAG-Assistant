@@ -1,0 +1,8 @@
+yt-dlp
+faster-whisper
+sentence-transformers
+faiss-cpu
+ollama
+streamlit
+gtts
+numpy
