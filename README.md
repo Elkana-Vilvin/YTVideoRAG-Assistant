@@ -11,7 +11,7 @@ Ask questions, generate summaries, extract transcripts, and even create closed c
 🔹 Chat-style interface (like ChatGPT)
 🔹 Works locally using Ollama (no API cost)
 
-- LLM: Ollama (Llama 3 / 3B model)
+- LLM: Ollama (Llama 3 / 3B model) can use better model based on the machine we use
 - Speech-to-Text: Faster-Whisper
 - Embeddings: Sentence Transformers (MiniLM)
 - Vector DB: FAISS
@@ -19,7 +19,7 @@ Ask questions, generate summaries, extract transcripts, and even create closed c
 - Video Processing: yt-dlp
 - TTS: gTTS
 
-Architecture 
+# Architecture 
 
 YouTube URL
    ↓
@@ -39,3 +39,18 @@ LLM (Ollama)
    ↓
 Answer / Summary / Captions
 
+# Setup cmds
+
+python3 -m venv venv
+ 
+source venv/bin/activate
+ 
+pip install --upgrade pip
+pip install streamlit yt-dlp faster-whisper faiss-cpu sentence-transformers ollama gTTS
+
+#New terminal
+ollama serve
+ 
+ollama pull llama3
+ 
+streamlit run app.py
